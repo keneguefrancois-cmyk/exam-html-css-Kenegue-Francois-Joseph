@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen HTML/CSS </title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.4; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        header { text-align: center; margin-bottom: 30px; border-bottom: 3px solid #333; padding-bottom: 20px; }
+        header h1 { font-size: 2em; margin-bottom: 10px; }
+        .info-header { display: flex; justify-content: space-between; margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; background: #f9f9f9; }
+        .partie { margin: 30px 0; padding: 20px; border: 2px solid #333; }
+        .partie h2 { font-size: 1.3em; margin-bottom: 20px; text-align: center; background: #333; color: white; padding: 10px; }
+        .correction-box { background: #e8f5e9; border-left: 4px solid #4CAF50; padding: 15px; margin-bottom: 20px; }
+        .correction-box h3 { color: #2e7d32; margin-bottom: 10px; }
+        .code-block { background: #f0f0f0; padding: 15px; border: 1px solid #999; margin: 15px 0; font-family: monospace; font-size: 0.85em; border-radius: 5px; overflow-x: auto; line-height: 1.5; }
+        .points { display: inline-block; background: #667eea; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.85em; margin-left: 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        table th, table td { padding: 12px; text-align: left; border: 1px solid #ddd; }
+        table th { background: #f5f5f5; font-weight: bold; }
+        .page-break { page-break-after: always; margin-top: 40px; padding-top: 40px; }
+        footer { margin-top: 40px; text-align: center; border-top: 2px solid #333; padding-top: 20px; font-size: 0.9em; }
+        ul, ol { margin-left: 20px; }
+        li { margin-bottom: 8px; }
+        .subquestion { margin-top: 15px; margin-left: 10px; }
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EXAMEN HTML/CSS </h1>
+            <p>Durée: 3 heures - Total: 100 points</p>
+        </header>
+
+        <div class="info-header">
+            <div><strong>Étudiant:</strong> <span>Kenegue François Joseph</span></div>
+            <div><strong>Professeur:</strong> <span>Haythem Rehouma</span></div>
+            <div><strong>Lieu:</strong> <span>CDI</span></div>
+        </div>
+
+        <!-- PARTIE 1 -->
+        <div class="partie">
+            <h2>PARTIE 1 – QUESTIONS THÉORIQUES (30 points)</h2>
+
+            <div class="correction-box">
+                <h3><span class="question-number">1. Structure d'une page HTML</span> <span class="points">6 pts</span></h3>
+                
+                <div class="subquestion">
+                    <strong>1.1. Structure minimale HTML5 valide</strong>
+                    <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Titre de la page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Contenu visible --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+                </div>
+
+                <div class="subquestion">
+                    <strong>1.2. Rôles des balises principales</strong>
+                    <ul>
+                        <li><strong>&lt;!DOCTYPE html&gt;</strong> : Déclare que le document est en HTML5 et permet au navigateur d'interpréter correctement la page.</li>
+                        <li><strong>&lt;html&gt;</strong> : Balise racine qui encadre tout le document HTML et définit la langue avec l'attribut lang.</li>
+                        <li><strong>&lt;head&gt;</strong> : Section contenant les métadonnées (titre, encodage, style, scripts) invisibles à l'écran mais essentielles pour le navigateur.</li>
+                        <li><strong>&lt;body&gt;</strong> : Section contenant tout le contenu visible de la page (texte, images, liens, etc.).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="correction-box">
+                <h3><span class="question-number">2. Balises et attributs</span> <span class="points">6 pts</span></h3>
+                
+                <div class="subquestion">
+                    <strong>2.1. Différence balise vs attribut</strong>
+                    <ul>
+                        <li><strong>Balise HTML:</strong> C'est un élément structurant du document qui encadre le contenu avec une paire de symboles &lt; et &gt;. Elle définit la nature du contenu (par exemple, &lt;p&gt; pour un paragraphe, &lt;h1&gt; pour un titre).</li>
+                        <li><strong>Attribut HTML:</strong> C'est une propriété ou une caractéristique ajoutée à l'intérieur d'une balise pour modifier son comportement ou ses propriétés. Il se présente sous la forme nom="valeur" (par exemple, href="lien.html").</li>
+                    </ul>
+                </div>
+
+                <div class="subquestion">
+                    <strong>2.2. Exemple de balise avec deux attributs</strong>
+                    <div class="code-block">&lt;a href="https://example.com" title="Cliquez ici"&gt;Lien vers le site&lt;/a&gt;</div>
+                    <ul>
+                        <li><strong>href:</strong> Cet attribut spécifie l'adresse URL de destination vers laquelle le lien renvoie.</li>
+                        <li><strong>title:</strong> Cet attribut affiche un texte informatif au survol du lien pour améliorer l'accessibilité et l'expérience utilisateur.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="correction-box">
+                <h3><span class="question-number">3. Sémantique HTML</span> <span class="points">6 pts</span></h3>
+                
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Rôle</th>
+                        <th>Exemple</th>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;div&gt;</strong></td>
+                        <td>Conteneur générique sans signification sémantique, utilisé uniquement pour regrouper et organiser le contenu.</td>
+                        <td>&lt;div class="conteneur"&gt;&lt;p&gt;Texte&lt;/p&gt;&lt;/div&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;header&gt;</strong></td>
+                        <td>Représente l'en-tête d'une page ou d'une section, contenant généralement le logo, le titre principal et la navigation.</td>
+                        <td>&lt;header&gt;&lt;h1&gt;Mon site&lt;/h1&gt;&lt;/header&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;nav&gt;</strong></td>
+                        <td>Encadre les liens de navigation principaux, indiquant aux moteurs de recherche qu'il s'agit de navigation.</td>
+                        <td>&lt;nav&gt;&lt;a href="/"&gt;Accueil&lt;/a&gt;&lt;/nav&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;section&gt;</strong></td>
+                        <td>Regroupe du contenu thématiquement lié formant une section logique de la page avec généralement un titre.</td>
+                        <td>&lt;section&gt;&lt;h2&gt;À propos&lt;/h2&gt;&lt;/section&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;article&gt;</strong></td>
+                        <td>Encadre un contenu autonome et réutilisable (billet de blog, article) qui pourrait être distribué indépendamment.</td>
+                        <td>&lt;article&gt;&lt;h3&gt;Titre&lt;/h3&gt;&lt;/article&gt;</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="correction-box">
+                <h3><span class="question-number">4. Sélecteurs CSS</span> <span class="points">6 pts</span></h3>
+                
+                <div class="subquestion">
+                    <strong>Sélecteur de type:</strong> Sélectionne tous les éléments d'un type HTML spécifique en utilisant le nom de la balise.
+                    <div class="code-block">p {
+  color: black;
+  font-size: 16px;
+}</div>
+                </div>
+
+                <div class="subquestion">
+                    <strong>Sélecteur de classe:</strong> Sélectionne tous les éléments ayant une classe spécifique en utilisant un point (.) suivi du nom de la classe.
+                    <div class="code-block">.important {
+  font-weight: bold;
+  color: red;
+}</div>
+                </div>
+
+                <div class="subquestion">
+                    <strong>Sélecteur d'identifiant:</strong> Sélectionne un seul élément portant un identifiant unique en utilisant un dièse (#).
+                    <div class="code-block">#menu {
+  background-color: navy;
+  padding: 20px;
+}</div>
+                </div>
+            </div>
+
+            <div class="correction-box">
+                <h3><span class="question-number">5. Box model et types d'éléments</span> <span class="points">6 pts</span></h3>
+                
+                <div class="subquestion">
+                    <strong>5.1. Les quatre parties du CSS box model:</strong>
+                    <ol>
+                        <li><strong>Contenu (Content):</strong> La zone contenant le texte ou les images, dimensionnée par width et height.</li>
+                        <li><strong>Remplissage (Padding):</strong> L'espace blanc à l'intérieur de la boîte, entre le contenu et la bordure.</li>
+                        <li><strong>Bordure (Border):</strong> La ligne autour du padding, définie par la propriété border.</li>
+                        <li><strong>Marge (Margin):</strong> L'espace transparent à l'extérieur de la bordure, séparant cet élément des autres.</li>
+                    </ol>
+                </div>
+
+                <div class="subquestion">
+                    <strong>5.2. Différence block vs inline:</strong>
+                    <ul>
+                        <li><strong>Block:</strong> Les éléments bloc occupent toute la largeur disponible et créent un retour à la ligne avant et après eux. Exemples: &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;, &lt;section&gt;</li>
+                        <li><strong>Inline:</strong> Les éléments inline ne prennent que l'espace nécessaire et restent sur la même ligne que les autres contenus. Exemples: &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PARTIE 2 -->
+        <div class="partie">
+            <h2>PARTIE 2 – ANALYSE DE CODE HTML/CSS (30 points)</h2>
+
+            <div class="correction-box">
+                <h3><span class="question-number">6. Analyse d'un extrait HTML</span> <span class="points">15 pts</span></h3>
+
+                <div class="subquestion">
+                    <strong>6.1. Balises sémantiques (4 pts)</strong>
+                    <ul>
+                        <li><strong>&lt;h1&gt;</strong> : Titre principal de la page</li>
+                        <li><strong>&lt;p&gt;</strong> : Paragraphes de texte</li>
+                        <li><strong>&lt;footer&gt;</strong> : Pied de page</li>
+                    </ul>
+                </div>
+
+                <div class="subquestion">
+                    <strong>6.2. Différence class="bloc" vs class="bloc important" (4 pts)</strong>
+                    <p>L'élément avec class="bloc" a UNE seule classe. L'élément avec class="bloc important" a DEUX classes appliquées simultanément.</p>
+                </div>
+
+                <div class="subquestion">
+                    <strong>6.3. Amélioration sémantique (3 pts)</strong>
+                    <p><strong>Proposition:</strong> Remplacer &lt;div class="bloc"&gt; par &lt;article&gt;</p>
+                </div>
+
+                <div class="subquestion">
+                    <strong>6.4. Balise manquante (4 pts)</strong>
+                    <div class="code-block">&lt;link rel="stylesheet" href="style.css"&gt;</div>
+                </div>
+            </div>
+
+            <div class="correction-box">
+                <h3><span class="question-number">7. Analyse d'un extrait CSS</span> <span class="points">15 pts</span></h3>
+
+                <div class="subquestion">
+                    <strong>7.1. Différence h1.titre vs .bloc.important (4 pts)</strong>
+                    <p><strong>h1.titre:</strong> Cible seulement les &lt;h1&gt; avec classe "titre"<br>
+                    <strong>.bloc.important:</strong> Cible les éléments avec SIMULTANÉMENT les deux classes</p>
+                </div>
+
+                <div class="subquestion">
+                    <strong>7.2. Apparence visuelle (4 pts)</strong>
+                    <ul>
+                        <li>Bordure: 2px solid #333</li>
+                        <li>Padding: 15px</li>
+                        <li>Margin: 10px</li>
+                        <li>Arrière-plan: #f5f5f5</li>
+                    </ul>
+                </div>
+
+                <div class="subquestion">
+                    <strong>7.3. Effet de #intro { color: red; } (3 pts)</strong>
+                    <p>Le texte devient rouge. L'id a une spécificité très élevée.</p>
+                </div>
+
+                <div class="subquestion">
+                    <strong>7.4. Règle CSS pour footer (4 pts)</strong>
+                    <div class="code-block">footer {
+  text-align: center;
+  font-size: 14px;
+  background-color: #f0f0f0;
+}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PARTIE 3 -->
+        <div class="partie">
+            <h2>PARTIE 3 – DÉVELOPPEMENT PRATIQUE (35 points)</h2>
+
+            <div class="correction-box">
+                <h3><span class="question-number">8. Mini page "Portfolio simple"</span> <span class="points">25 pts</span></h3>
+
+                <div class="subquestion">
+                    <strong>8.1. Structure HTML (15 pts)</strong>
+                    <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Portfolio - Kenegue François Joseph&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Portfolio de Kenegue François Joseph&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;nav id="navigation"&gt;
+    &lt;a href="#accueil"&gt;Accueil&lt;/a&gt;
+    &lt;a href="#projets"&gt;Projets&lt;/a&gt;
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;main id="contenu-principal"&gt;
+    &lt;section id="apropos"&gt;
+      &lt;h2&gt;À propos&lt;/h2&gt;
+      &lt;p&gt;Je suis un développeur web passionné par la création d'expériences utilisateur exceptionnelles...&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="projets"&gt;
+      &lt;h2&gt;Projets&lt;/h2&gt;
+      &lt;div class="projet"&gt;
+        &lt;h3&gt;Projet 1&lt;/h3&gt;
+        &lt;p&gt;Description du projet...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="projet"&gt;
+        &lt;h3&gt;Projet 2&lt;/h3&gt;
+        &lt;p&gt;Description du projet...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="projet"&gt;
+        &lt;h3&gt;Projet 3&lt;/h3&gt;
+        &lt;p&gt;Description du projet...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2024 Kenegue François Joseph. Tous droits réservés.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+                </div>
+
+                <div class="subquestion">
+                    <strong>8.2. Mise en forme CSS (10 pts)</strong>
+                    <div class="code-block">* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+header { background-color: #f5f5f5; padding: 30px 20px; text-align: center; }
+#navigation { display: flex; justify-content: center; gap: 30px; padding: 20px; }
+.projet { border: 1px solid #ddd; padding: 20px; margin: 15px 0; border-radius: 8px; }
+footer { text-align: center; font-size: 14px; background-color: #f5f5f5; padding: 20px; }</div>
+                </div>
+            </div>
+
+            <div class="correction-box">
+                <h3><span class="question-number">9. Questions Responsive</span> <span class="points">10 pts</span></h3>
+
+                <div class="subquestion">
+                    <strong>9.1. Responsive Design (5 pts)</strong>
+                    <p>Le responsive design est une approche de conception web qui rend les sites adaptables à tous les appareils et tailles d'écran. Important car 60% du trafic vient du mobile et Google privilégie les sites mobile-friendly.</p>
+                </div>
+
+                <div class="subquestion">
+                    <strong>9.2. Media query ≤ 600px (5 pts)</strong>
+                    <div class="code-block">@media (max-width: 600px) {
+  body { font-size: 14px; }
+  header h1 { font-size: 1.8em; }
+  #navigation { flex-direction: column; gap: 10px; }
+  .projet { padding: 15px; margin: 10px 0; }
+}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PARTIE 4 -->
+        <div class="partie">
+            <h2>PARTIE 4 – DÉPLOIEMENT GITHUB/VERCEL (travail pratique de synthèse) (5 points)</h2>
+
+            <p style="margin-bottom: 15px; font-style: italic;">pour la pratique finale ou de bonus, selon les consignes de l'enseignant. nous enverons les liens du déploiement en ligne de page HTML/CSS.</p>
+
+            <div class="correction-box">
+                <h3><span class="question-number">10. Publication de la page sur GitHub et Vercel</span> <span class="points">5 pts</span></h3>
+
+                <p style="margin-bottom: 15px;"><strong>À partir de votre page "Portfolio simple" (question 8) ou d'une version minimale fonctionnelle :</strong></p>
+                <ul style="margin-bottom: 20px;">
+                    <li>Créez un dépôt GitHub pour ce projet (par exemple : exam-html-css-[votre-nom])</li>
+                    <li>Ajoutez vos fichiers index.html (et style.css si vous l'utilisez), faites un commit puis un push vers GitHub</li>
+                    <li>Connectez ce dépôt à Vercel et déployez la page</li>
+                    <li>Modifiez ensuite votre page (par exemple : changer le titre dans &lt;h1&gt;, ajouter un projet, modifier une couleur CSS), faites un nouveau commit et un nouveau push, puis vérifiez que la modification est visible sur Vercel</li>
+                </ul>
+
+                <div class="subquestion">
+                    <strong>10.1. URL du dépôt GitHub</strong>
+                    <p style="margin-top: 10px;"><strong>Zone de réponse 10.1 :</strong></p>
+                    <p style="background: white; padding: 10px; border: 1px dotted #999; margin-top: 10px; min-height: 50px;">URL du dépôt GitHub :<br>
+................................................................................</p>
+                </div>
+
+                <div class="subquestion">
+                    <strong>10.2. URL du site déployé sur Vercel</strong>
+                    <p style="margin-top: 10px;"><strong>Zone de réponse 10.2 :</strong></p>
+                    <p style="background: white; padding: 10px; border: 1px dotted #999; margin-top: 10px; min-height: 50px;">URL du site sur Vercel :<br>
+................................................................................</p>
+                </div>
+
+                <div class="subquestion">
+                    <strong>10.3. Résumé des commandes et des étapes Git/GitHub/Vercel</strong>
+                    <p style="margin-top: 10px;"><strong>Décrivez brièvement :</strong></p>
+                    <ul style="margin: 10px 0 20px 20px;">
+                        <li>les principales commandes Git utilisées (init, add, commit, push, etc.),</li>
+                        <li>les grandes étapes suivies pour connecter le dépôt à Vercel et lancer le déploiement,</li>
+                        <li>ce que vous avez modifié dans la page avant le second push, et comment vous avez vérifié que le site était bien mis à jour.</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;"><strong>Zone de réponse 10.3 :</strong></p>
+
+                    <p style="margin-top: 15px;"><strong>Commandes Git principales :</strong></p>
+                    <p style="background: white; padding: 10px; border: 1px dotted #999; margin-top: 10px; min-height: 80px;">
+................................................................................<br>
+................................................................................<br>
+................................................................................</p>
+
+                    <p style="margin-top: 20px;"><strong>Étapes de connexion GitHub → Vercel :</strong></p>
+                    <p style="background: white; padding: 10px; border: 1px dotted #999; margin-top: 10px; min-height: 80px;">
+................................................................................<br>
+................................................................................<br>
+................................................................................</p>
+
+                    <p style="margin-top: 20px;"><strong>Modification effectuée avant le 2e push :</strong></p>
+                    <p style="background: white; padding: 10px; border: 1px dotted #999; margin-top: 10px; min-height: 60px;">
+................................................................................<br>
+................................................................................</p>
+
+                    <p style="margin-top: 20px;"><strong>Vérification de la mise à jour sur Vercel :</strong></p>
+                    <p style="background: white; padding: 10px; border: 1px dotted #999; margin-top: 10px; min-height: 60px;">
+................................................................................<br>
+................................................................................</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong> >© 2025 JoseSCAN Design™. Tous droits réservés | CDI - Examen HTML/CSS</strong></p>
+        </footer>
+    </div>
+</body>
+</html>
